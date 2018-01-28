@@ -1,10 +1,10 @@
 function proposals = get_proposals(base_path, video_dir, output_path)
 proposal_dir = 'proposals';
-if exist(fullfile(output_path, proposal_dir, [video_dir '.mat']),'file')
-    proposals = load(fullfile(output_path, proposal_dir, [video_dir '.mat']));
-    proposals = proposals.proposals;
-    return;
-end
+% if exist(fullfile(output_path, proposal_dir, [video_dir '.mat']),'file')
+%     proposals = load(fullfile(output_path, proposal_dir, [video_dir '.mat']));
+%     proposals = proposals.proposals;
+%     return;
+% end
 video_path = fullfile(base_path, video_dir, 'resized');
 resized_imgs = dir(fullfile(video_path, '*.JPEG'));
 org_img = imread(fullfile(base_path, video_dir,'000000.JPEG'));
