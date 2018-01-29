@@ -19,8 +19,8 @@ resized_width = size(I,2);
 resize_ratio = max(org_height,org_width) / max(resized_height,resized_width);
 [mcg_result, ~, ~] = im2mcg(I,'accurate');
 bbs = mcg_result.bboxes;
-if size(bbs, 1) > 1000  % 取前1000
-    bbs = bbs(1:1000,:);
+if size(bbs, 1) > 500  % 取前1000
+    bbs = bbs(1:500,:);
 end
 
 start_frame = 0;
